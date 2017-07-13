@@ -1,15 +1,23 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1 {
-  background: #2980b9;
+  background: #16A085;
   color: white;
   margin: 0;
   padding: 10px 20px;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: normal;
+}
+
+.fa-pencil {
+  float: right;
 }
 
 ul {
@@ -30,13 +38,21 @@ background: #f7f7f7;
 }
 
 input {
-  font-size: 20;
-  background: #f7f7f7;
+  font-size: 20px;
+  color: #666;
+  text-decoration-color: #666;
+  background-color: #f7f7f7;
   width: 100%;
-  padding: 13 13 13 20;
-  box-sizing: border-box;
-  height: 40px;
-  line-height: 40px;
+  padding: 5px 13px 5px 20px;
+  box-sizing: border-box; // add prefixes
+  height: 30px;
+  line-height: 30px;
+  border: 3px solid rgba(0, 0, 0)
+}
+
+input:focus {
+  background: #fff;
+  border: #16A085;
 }
 
 #container {
@@ -49,4 +65,21 @@ input {
 .completed {
   color: gray;
   text-decoration: line-through;
+}
+
+span {
+  background-color: maroon;
+  height: 40px;
+  width:0;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: 0.2s linear;
+}
+
+li:hover span {
+  width: 40px;
+  opacity: 1.0;
 }
